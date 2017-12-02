@@ -1,0 +1,11 @@
+{% extends 'biblioteca/base.html' %}
+{% load staticfiles %}
+
+  {% block content %}
+  <h1><a href="">Empréstimos</a></h1>
+    {% for emprestimo in emprestimos %}
+      <div class="post">
+        <h1><a href="{% url 'emprestimo_detail' pk=emprestimo.pk %}">{{ emprestimo.cliente }}</a></h1>
+      </div>
+    {% endfor %}
+  {% endblock %}

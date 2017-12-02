@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Livros</title>
-  </head>
-  <body>
-    <div>
-            <h1><a href="">Biblioteca do Roque</a></h1>
-        </div>
+{% extends 'biblioteca/base.html' %}
+{% load staticfiles %}
+            {% block content %}
+                {% for livro in livros %}
+                    <div class="post">
+                        <h1><a href="">{{ livro.titulo }}</a></h1>
+                    </div>
+                {% endfor %}
+            {% endblock %}
 
-        {% for livro in livros %}
-          {{ livro }}
-        {% endfor %}
-
-        {% for livro in livros %}
-          <div>
-            <h1><a href="">{{ livro.titulo }}</a></h1>
-          </div>
-        {% endfor %}
+        <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
 
   </body>
 </html>
