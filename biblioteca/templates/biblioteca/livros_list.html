@@ -9,10 +9,15 @@
             <h1><a href="">Biblioteca do Roque</a></h1>
         </div>
 
-        <div>
-            <h2><a href="">Oi</a></h2>
-            <p>Isso vai ser uma biblioteca, eu juro.</p>
-        </div>
+        {% for livro in livros %}
+          {{ livro }}
+        {% endfor %}
+
+        {% for livro in livros %}
+          <div>
+            <h1><a href="">{{ livro.titulo }}</a></h1>
+          </div>
+        {% endfor %}
 
   </body>
 </html>
